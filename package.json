@@ -1,0 +1,54 @@
+{
+  "name": "reactcommenthelper",
+  "displayName": "React Comment Helper",
+  "description": "Write HTML comment in React .tsx file for development.",
+  "version": "0.0.1",
+  "publisher": "pacolemon",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:razor",
+    "onLanguage:vue-html",
+    "onLanguage:xml",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "reactcommenthelper.createCommentFile",
+        "title": "ReactCommentHelper: Create comment file"
+      },
+      {
+        "command": "reactcommenthelper.removeCommentHelper",
+        "title": "ReactCommentHelper: Clear Comments"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/test-electron": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmpmachine/vsce-divless.git"
+  }
+}
